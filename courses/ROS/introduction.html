@@ -6,29 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- meta tags -->
     <title>ROS (Robot Operating System) Course - Dr. Vijay Kumar Jadon</title>
-    <meta name="title" content="ROS (Robot Operating System) Course - Dr. Vijay Kumar Jadon">
-    <meta name="description" content="ROS is a meta (after or beyond) operating system that runs on the existing operating system. It provides a set of tools, libraries, and conventions that make it easier to develop, test, and deploy robot systems.">
+    <meta
+      name="title"
+      content="ROS (Robot Operating System) Course - Dr. Vijay Kumar Jadon"
+    />
+    <meta
+      name="description"
+      content="ROS is a meta (after or beyond) operating system that runs on the existing operating system. It provides a set of tools, libraries, and conventions that make it easier to develop, test, and deploy robot systems."
+    />
     <!-- css -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../css/pygments.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../css/theme.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../css/graphviz.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../css/copybutton.css"
-    />
+    <link rel="stylesheet" type="text/css" href="../css/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../css/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../css/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../css/tabs.css" />
     <link rel="shortcut icon" href="../img/ROS.png" />
     <script src="../js/jquery.js"></script>
@@ -41,24 +31,27 @@
     <script src="../js/theme.js"></script>
     <!-- For Syntax highlighting -->
     <!-- Prism.js -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
     <!-- Clipboard.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <style>
-        .copy-btn {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            background: #f5f5f5;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-        }
+      .copy-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: #f5f5f5;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+      }
 
-        pre {
-            position: relative;
-        }
+      pre {
+        position: relative;
+      }
     </style>
   </head>
 
@@ -69,7 +62,11 @@
           <div class="wy-side-nav-search">
             <a href="/index.html" class="icon icon-home">
               ROS (Robot Operating System) - Dr. Vijay Kumar Jadon
-              <img src="../img/ROS.png" class="logo" alt="Dr. Vijay Kumar Jadon ROS Logo" />
+              <img
+                src="../img/ROS.png"
+                class="logo"
+                alt="Dr. Vijay Kumar Jadon ROS Logo"
+              />
             </a>
           </div>
           <div
@@ -80,1967 +77,130 @@
           >
             <ul class="current">
               <!-- Introduction -->
-              <a class="reference internal" href="introduction.html">Introduction</a>
-              <!-- Installation -->
-              <!-- <li class="toctree-l1">
-                <a class="reference internal" href="Installation.html"
-                  >Installation</a
-                >
-                <ul>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Installation/Ubuntu-Install-Debians.html"
-                      >Ubuntu (Debian packages)</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Installation/Windows-Install-Binary.html"
-                      >Windows (binary)</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Installation/RHEL-Install-RPMs.html"
-                      >RHEL (RPM packages)</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Installation/Alternatives.html"
-                      >Alternatives</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/Alternatives/Ubuntu-Development-Setup.html"
-                          >Ubuntu (source)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/Alternatives/Ubuntu-Install-Binary.html"
-                          >Ubuntu (binary)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/Alternatives/Windows-Development-Setup.html"
-                          >Windows (source)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/Alternatives/RHEL-Development-Setup.html"
-                          >RHEL (source)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/Alternatives/RHEL-Install-Binary.html"
-                          >RHEL (binary)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/Alternatives/macOS-Development-Setup.html"
-                          >macOS (source)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/Alternatives/Latest-Development-Setup.html"
-                          >Latest development (source)</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Installation/Maintaining-a-Source-Checkout.html"
-                      >Maintain source checkout</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Installation/Testing.html"
-                      >Testing with pre-release binaries</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Installation/DDS-Implementations.html"
-                      >DDS implementations</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/DDS-Implementations/Install-Connext-Security-Plugins.html"
-                          >Connext security plugins</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/DDS-Implementations/Install-Connext-University-Eval.html"
-                          >RTI Connext DDS</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html"
-                          >Eclipse Cyclone DDS</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html"
-                          >GurumNetworks GurumDDS</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Installation/DDS-Implementations/Working-with-eProsima-Fast-DDS.html"
-                          >eProsima Fast DDS</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> -->
-              <!-- Distributions -->
-              <!-- <li class="toctree-l1">
-                <a class="reference internal" href="Releases.html"
-                  >Distributions</a
-                >
-                <ul>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Releases/Release-Jazzy-Jalisco.html"
-                      >Jazzy Jalisco (<code class="docutils literal notranslate"
-                        ><span class="pre">jazzy</span></code
-                      >)</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Jazzy-Jalisco-Complete-Changelog.html"
-                          >Jazzy Jalisco changelog</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Releases/Release-Iron-Irwini.html"
-                      >Iron Irwini (<code class="docutils literal notranslate"
-                        ><span class="pre">iron</span></code
-                      >)</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Iron-Irwini-Complete-Changelog.html"
-                          >Iron Irwini Changelog</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Releases/Release-Humble-Hawksbill.html"
-                      >Humble Hawksbill (<code
-                        class="docutils literal notranslate"
-                        ><span class="pre">humble</span></code
-                      >)</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Humble-Hawksbill-Complete-Changelog.html"
-                          >Humble Hawksbill changelog</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Releases/Release-Rolling-Ridley.html"
-                      >Rolling Ridley (<code
-                        class="docutils literal notranslate"
-                        ><span class="pre">rolling</span></code
-                      >)</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Releases/Development.html"
-                      >Development Distribution</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Kilted-Kaiju.html"
-                          >Kilted Kaiju (codename ‘kilted’; May, 2025)</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Releases/End-of-Life.html"
-                      >End-of-Life Distributions</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Galactic-Geochelone.html"
-                          >Galactic Geochelone (<code
-                            class="docutils literal notranslate"
-                            ><span class="pre">galactic</span></code
-                          >)</a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Releases/Galactic-Geochelone-Complete-Changelog.html"
-                              >Galactic Geochelone changelog</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Foxy-Fitzroy.html"
-                          >Foxy Fitzroy (<code
-                            class="docutils literal notranslate"
-                            ><span class="pre">foxy</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Eloquent-Elusor.html"
-                          >Eloquent Elusor (<code
-                            class="docutils literal notranslate"
-                            ><span class="pre">eloquent</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Dashing-Diademata.html"
-                          >Dashing Diademata (<code
-                            class="docutils literal notranslate"
-                            ><span class="pre">dashing</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Crystal-Clemmys.html"
-                          >Crystal Clemmys (<code
-                            class="docutils literal notranslate"
-                            ><span class="pre">crystal</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Bouncy-Bolson.html"
-                          >Bouncy Bolson (<code
-                            class="docutils literal notranslate"
-                            ><span class="pre">bouncy</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Release-Ardent-Apalone.html"
-                          >Ardent Apalone (<code
-                            class="docutils literal notranslate"
-                            ><span class="pre">ardent</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Beta3-Overview.html"
-                          >Beta 3 (<code class="docutils literal notranslate"
-                            ><span class="pre">r2b3</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Beta2-Overview.html"
-                          >Beta 2 (<code class="docutils literal notranslate"
-                            ><span class="pre">r2b2</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Beta1-Overview.html"
-                          >Beta 1 (<code class="docutils literal notranslate"
-                            ><span class="pre">Asphalt</span></code
-                          >)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Releases/Alpha-Overview.html"
-                          >Alphas</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Releases/Release-Process.html"
-                      >Development process for a release</a
-                    >
-                  </li>
-                </ul>
-              </li> -->
-              <!-- Tutorials -->
-              <!-- <li class="toctree-l1 current">
-                <a class="current reference internal" href="#">Tutorials</a>
-                <ul>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Tutorials/Beginner-CLI-Tools.html"
-                      >Beginner: CLI tools</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html"
-                          >Configuring environment</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html"
-                          >Using
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">turtlesim</span></code
-                          >,
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">ros2</span></code
-                          >, and
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">rqt</span></code
-                          ></a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html"
-                          >Understanding nodes</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html"
-                          >Understanding topics</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html"
-                          >Understanding services</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html"
-                          >Understanding parameters</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html"
-                          >Understanding actions</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html"
-                          >Using
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">rqt_console</span></code
-                          >
-                          to view logs</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.html"
-                          >Launching nodes</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html"
-                          >Recording and playing back data</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Tutorials/Beginner-Client-Libraries.html"
-                      >Beginner: Client libraries</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html"
-                          >Using
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">colcon</span></code
-                          >
-                          to build packages</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html"
-                          >Creating a workspace</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html"
-                          >Creating a package</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html"
-                          >Writing a simple publisher and subscriber (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html"
-                          >Writing a simple publisher and subscriber (Python)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client.html"
-                          >Writing a simple service and client (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Service-And-Client.html"
-                          >Writing a simple service and client (Python)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html"
-                          >Creating custom msg and srv files</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html"
-                          >Implementing custom interfaces</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-CPP.html"
-                          >Using parameters in a class (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html"
-                          >Using parameters in a class (Python)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Getting-Started-With-Ros2doctor.html"
-                          >Using
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">ros2doctor</span></code
-                          >
-                          to identify issues</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Beginner-Client-Libraries/Pluginlib.html"
-                          >Creating and using plugins (C++)</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Tutorials/Intermediate.html"
-                      >Intermediate</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Rosdep.html"
-                          >Managing Dependencies with rosdep</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Creating-an-Action.html"
-                          >Creating an action</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html"
-                          >Writing an action server and client (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Writing-an-Action-Server-Client/Py.html"
-                          >Writing an action server and client (Python)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Writing-a-Composable-Node.html"
-                          >Writing a Composable Node (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Composition.html"
-                          >Composing multiple nodes in a single process</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Monitoring-For-Parameter-Changes-CPP.html"
-                          >Monitoring for parameter changes (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Monitoring-For-Parameter-Changes-Python.html"
-                          >Monitoring for parameter changes (Python)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Launch/Launch-Main.html"
-                          >Launch</a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Launch/Creating-Launch-Files.html"
-                              >Creating a launch file</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Launch/Launch-system.html"
-                              >Integrating launch files into ROS 2 packages</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Launch/Using-Substitutions.html"
-                              >Using substitutions</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Launch/Using-Event-Handlers.html"
-                              >Using event handlers</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Launch/Using-ROS2-Launch-For-Large-Projects.html"
-                              >Managing large projects</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Tf2/Tf2-Main.html"
-                          ><code class="docutils literal notranslate"
-                            ><span class="pre">tf2</span></code
-                          ></a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html"
-                              >Introducing
-                              <code class="docutils literal notranslate"
-                                ><span class="pre">tf2</span></code
-                              ></a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html"
-                              >Writing a static broadcaster (Python)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html"
-                              >Writing a static broadcaster (C++)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.html"
-                              >Writing a broadcaster (Python)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html"
-                              >Writing a broadcaster (C++)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py.html"
-                              >Writing a listener (Python)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp.html"
-                              >Writing a listener (C++)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.html"
-                              >Adding a frame (Python)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Adding-A-Frame-Cpp.html"
-                              >Adding a frame (C++)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.html"
-                              >Using time (C++)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp.html"
-                              >Traveling in time (C++)</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Debugging-Tf2-Problems.html"
-                              >Debugging</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Quaternion-Fundamentals.html"
-                              >Quaternion fundamentals</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html"
-                              >Using stamped datatypes with
-                              <code class="docutils literal notranslate"
-                                ><span class="pre"
-                                  >tf2_ros::MessageFilter</span
-                                ></code
-                              ></a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/Testing/Testing-Main.html"
-                          >Testing</a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Testing/CLI.html"
-                              >Running Tests in ROS 2 from the Command Line</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Testing/Cpp.html"
-                              >Writing Basic Tests with C++ with GTest</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/Testing/Python.html"
-                              >Writing Basic Tests with Python</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/URDF/URDF-Main.html"
-                          >URDF</a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html"
-                              >Building a visual robot model from scratch</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html"
-                              >Building a movable robot model</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html"
-                              >Adding physical and collision properties</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html"
-                              >Using Xacro to clean up your code</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher.html"
-                              >Using URDF with
-                              <code class="docutils literal notranslate"
-                                ><span class="pre"
-                                  >robot_state_publisher</span
-                                ></code
-                              ></a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/URDF/Exporting-an-URDF-File.html"
-                              >Generating an URDF File</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Intermediate/RViz/RViz-Main.html"
-                          >RViz</a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html"
-                              >RViz User Guide</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Intermediate/RViz/RViz-Custom-Display/RViz-Custom-Display.html"
-                              >Building a Custom RViz Display</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a class="reference internal" href="Tutorials/Advanced.html"
-                      >Advanced</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Topic-Statistics-Tutorial/Topic-Statistics-Tutorial.html"
-                          >Enabling topic statistics (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Discovery-Server/Discovery-Server.html"
-                          >Using Fast DDS Discovery Server as discovery protocol
-                          [community-contributed]</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Allocator-Template-Tutorial.html"
-                          >Implementing a custom memory allocator</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/FastDDS-Configuration.html"
-                          >Unlocking the potential of Fast DDS middleware
-                          [community-contributed]</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Improved-Dynamic-Discovery.html"
-                          >Improved Dynamic Discovery</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP.html"
-                          >Recording a bag from a node (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py.html"
-                          >Recording a bag from a node (Python)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Reading-From-A-Bag-File-CPP.html"
-                          >Reading from a bag file (C++)</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html"
-                          >How to use ros2_tracing to trace and analyze an
-                          application</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Simulators/Simulation-Main.html"
-                          >Simulators</a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Simulators/Webots/Simulation-Webots.html"
-                              >Webots</a
-                            >
-                            <ul>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Webots/Installation-Ubuntu.html"
-                                  >Installation (Ubuntu)</a
-                                >
-                              </li>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Webots/Installation-Windows.html"
-                                  >Installation (Windows)</a
-                                >
-                              </li>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Webots/Installation-MacOS.html"
-                                  >Installation (macOS)</a
-                                >
-                              </li>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Webots/Setting-Up-Simulation-Webots-Basic.html"
-                                  >Setting up a robot simulation (Basic)</a
-                                >
-                              </li>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Webots/Setting-Up-Simulation-Webots-Advanced.html"
-                                  >Setting up a robot simulation (Advanced)</a
-                                >
-                              </li>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Webots/Simulation-Reset-Handler.html"
-                                  >Setting up a Reset Handler</a
-                                >
-                              </li>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Webots/Simulation-Supervisor.html"
-                                  >The Ros2Supervisor Node</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Simulators/Gazebo/Simulation-Gazebo.html"
-                              >Gazebo</a
-                            >
-                            <ul>
-                              <li class="toctree-l5">
-                                <a
-                                  class="reference internal"
-                                  href="Tutorials/Advanced/Simulators/Gazebo/Gazebo.html"
-                                  >Setting up a robot simulation (Gazebo)</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Advanced/Security/Security-Main.html"
-                          >Security</a
-                        >
-                        <ul>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Security/Introducing-ros2-security.html"
-                              >Setting up security</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Security/The-Keystore.html"
-                              >Understanding the security keystore</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Security/Security-on-Two.html"
-                              >Ensuring security across machines</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Security/Examine-Traffic.html"
-                              >Examining network traffic</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Security/Access-Controls.html"
-                              >Setting access controls</a
-                            >
-                          </li>
-                          <li class="toctree-l4">
-                            <a
-                              class="reference internal"
-                              href="Tutorials/Advanced/Security/Deployment-Guidelines.html"
-                              >Deployment Guidelines</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a class="reference internal" href="Tutorials/Demos.html"
-                      >Demos</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Quality-of-Service.html"
-                          >Using quality-of-service settings for lossy
-                          networks</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Managed-Nodes.html"
-                          >Managing nodes with managed lifecycles</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Intra-Process-Communication.html"
-                          >Setting up efficient intra-process communication</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Rosbag-with-ROS1-Bridge.html"
-                          >Recording and playing back data with
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">rosbag</span></code
-                          >
-                          using the ROS 1 bridge</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Real-Time-Programming.html"
-                          >Understanding real-time programming</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/dummy-robot-demo.html"
-                          >Experimenting with a dummy robot</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Logging-and-logger-configuration.html"
-                          >Logging</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Content-Filtering-Subscription.html"
-                          >Creating a content filtering subscription</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Demos/Service-Introspection.html"
-                          >Configure service introspection</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Tutorials/Miscellaneous.html"
-                      >Miscellaneous</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Miscellaneous/Deploying-ROS-2-on-IBM-Cloud.html"
-                          >Deploying on IBM Cloud Kubernetes
-                          [community-contributed]</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Miscellaneous/Eclipse-Oxygen-with-ROS-2-and-rviz2.html"
-                          >Using Eclipse Oxygen with
-                          <code class="docutils literal notranslate"
-                            ><span class="pre">rviz2</span></code
-                          >
-                          [community-contributed]</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Miscellaneous/Building-Realtime-rt_preempt-kernel-for-ROS-2.html"
-                          >Building a real-time Linux kernel
-                          [community-contributed]</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Tutorials/Miscellaneous/Building-ROS2-Package-with-eclipse-2021-06.html"
-                          >Building a package with Eclipse 2021-06</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> -->
-              <!--
               <li class="toctree-l1">
-                <a class="reference internal" href="How-To-Guides.html"
-                  >How-to Guides</a
+                <a class="reference internal" href="introduction.html"
+                  >Introduction</a
                 >
                 <ul>
+                  <!-- Robots -->
                   <li class="toctree-l2">
                     <a
                       class="reference internal"
-                      href="How-To-Guides/Installation-Troubleshooting.html"
-                      >Installation troubleshooting</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Developing-a-ROS-2-Package.html"
-                      >Developing a ROS 2 package</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Documenting-a-ROS-2-Package.html"
-                      >Documenting a ROS 2 package</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Ament-CMake-Documentation.html"
-                      >ament_cmake user documentation</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Ament-CMake-Python-Documentation.html"
-                      >ament_cmake_python user documentation</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Migrating-from-ROS1.html"
-                      >Migrating from ROS 1 to ROS 2</a
+                      href="introduction.html#Robots"
+                      >Robots</a
                     >
                     <ul>
+                      <!-- Characteristics of Robots -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Migrating-from-ROS1/Migrating-Packages.html"
-                          >Migrating Packages</a
+                          href="introduction.html#CharacteristicsofRobots"
+                          >Characteristics of Robots</a
                         >
                       </li>
+                      <!-- Major Components of Robot -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Migrating-from-ROS1/Migrating-Interfaces.html"
-                          >Migrating Interfaces</a
+                          href="introduction.html#MajorComponentsofRobot"
+                          >Major Components of Robot</a
                         >
                       </li>
+                      <!-- Multidisciplinary Knowledge -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Migrating-from-ROS1/Migrating-CPP-Packages.html"
-                          >Migrating C++ Packages</a
+                          href="introduction.html#MultidisciplinaryKnowledge"
+                          >Multidisciplinary Knowledge</a
                         >
                       </li>
+                      <!-- Autonomous Robots -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Migrating-from-ROS1/Migrating-Python-Packages.html"
-                          >Migrating Python Packages</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="How-To-Guides/Migrating-from-ROS1/Migrating-Launch-Files.html"
-                          >Migrating Launch Files</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="How-To-Guides/Migrating-from-ROS1/Migrating-Parameters.html"
-                          >Migrating Parameters</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="How-To-Guides/Migrating-from-ROS1/Migrating-Scripts.html"
-                          >Migrating Scripts</a
+                          href="introduction.html#AutonomousRobots"
+                          >Autonomous Robots</a
                         >
                       </li>
                     </ul>
                   </li>
+
+                  <!-- Why ROS -->
                   <li class="toctree-l2">
                     <a
                       class="reference internal"
-                      href="How-To-Guides/Launch-file-different-formats.html"
-                      >Using Python, XML, and YAML for ROS 2 Launch Files</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Launching-composable-nodes.html"
-                      >Using ROS 2 launch to launch composable nodes</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Node-arguments.html"
-                      >Passing ROS arguments to nodes via the command-line</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Sync-Vs-Async.html"
-                      >Synchronous vs. asynchronous service clients</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/DDS-tuning.html"
-                      >DDS tuning information</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Overriding-QoS-Policies-For-Recording-And-Playback.html"
-                      >rosbag2: Overriding QoS Policies</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Working-with-multiple-RMW-implementations.html"
-                      >Working with multiple ROS 2 middleware implementations</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Cross-compilation.html"
-                      >Cross-compilation</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Releasing/Releasing-a-Package.html"
-                      >Releasing a Package</a
+                      href="introduction.html#WhyROS"
+                      >ROS</a
                     >
                     <ul>
+                      <!-- Why ROS -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Releasing/Index-Your-Packages.html"
-                          >Index Your Packages</a
+                          href="introduction.html#WhyROS"
+                          >Why ROS</a
                         >
                       </li>
+                      <!-- Robot Operating System -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Releasing/First-Time-Release.html"
-                          >First Time Release</a
+                          href="introduction.html#RobotOperatingSystem"
+                          >Robot Operating System</a
                         >
                       </li>
+                      <!-- Robot Integration Capabilities -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Releasing/Subsequent-Releases.html"
-                          >Subsequent Releases</a
+                          href="introduction.html#RobotIntegrationCapabilities"
+                          >Robot Integration Capabilities</a
                         >
                       </li>
+                      <!-- Currently Supported Distributions -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Releasing/Release-Team-Repository.html"
-                          >Release Team / Repository</a
+                          href="introduction.html#CurrentlySupportedDistributions"
+                          >Currently Supported Distributions</a
                         >
                       </li>
+                      <!-- About ROS Features -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/Releasing/Release-Track.html"
-                          >Release Track</a
+                          href="introduction.html#AboutROSFeatures"
+                          >About ROS Features</a
                         >
                       </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Using-Python-Packages.html"
-                      >Using Python Packages with ROS 2</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/RQt-Port-Plugin-Windows.html"
-                      >Porting RQt plugins to Windows</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html"
-                      >Running ROS 2 nodes in Docker [community-contributed]</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Visualizing-ROS-2-Data-With-Foxglove-Studio.html"
-                      >Visualizing ROS 2 data with Foxglove Studio</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Package-maintainer-guide.html"
-                      >ROS 2 Package Maintainer Guide</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Building-a-Custom-Debian-Package.html"
-                      >Building a custom Debian package</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Building-ROS-2-with-Tracing.html"
-                      >Building ROS 2 with tracing</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Topics-Services-Actions.html"
-                      >Topics vs Services vs Actions</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Using-Variants.html"
-                      >Using variants</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Using-ros2-param.html"
-                      >Using the
-                      <code class="docutils literal notranslate"
-                        ><span class="pre">ros2</span>
-                        <span class="pre">param</span></code
-                      >
-                      command-line tool</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Using-ros1_bridge-Jammy-upstream.html"
-                      >Using
-                      <code class="docutils literal notranslate"
-                        ><span class="pre">ros1_bridge</span></code
-                      >
-                      with upstream ROS on Ubuntu 22.04</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Configure-ZeroCopy-loaned-messages.html"
-                      >Configure Zero Copy Loaned Messages</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Installing-on-Raspberry-Pi.html"
-                      >ROS 2 on Raspberry Pi</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Using-callback-groups.html"
-                      >Using Callback Groups</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Getting-Backtraces-in-ROS-2.html"
-                      >Getting Backtraces in ROS 2</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/ROS-2-IDEs.html"
-                      >IDEs and Debugging [community-contributed]</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Setup-ROS-2-with-VSCode-and-Docker-Container.html"
-                      >Setup ROS 2 with VSCode and Docker
-                      [community-contributed]</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/Using-Custom-Rosdistro.html"
-                      >Using Custom Rosdistro Version</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="How-To-Guides/RQt-Source-Install.html"
-                      >Building RQt from source</a
-                    >
-                    <ul>
+                      <!-- ROS Applications -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/RQt-Source-Install-MacOS.html"
-                          >Building RQt from source on macOS</a
+                          href="introduction.html#ROSApplications"
+                          >ROS Applications</a
                         >
                       </li>
+                      <!-- ROS2 Concepts, Tools and Technologies -->
                       <li class="toctree-l3">
                         <a
                           class="reference internal"
-                          href="How-To-Guides/RQt-Source-Install-Windows10.html"
-                          >Building RQt from source on Windows 10</a
+                          href="introduction.html#ROS2ConceptsToolsandTechnologies"
+                          >ROS2 Concepts, Tools and Technologies</a
+                        >
+                      </li>
+                      <!-- Current Distributions -->
+                      <li class="toctree-l3">
+                        <a
+                          class="reference internal"
+                          href="introduction.html#CurrentDistributions"
+                          >Current Distributions</a
                         >
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
-              <li class="toctree-l1">
-                <a class="reference internal" href="Concepts.html">Concepts</a>
-                <ul>
-                  <li class="toctree-l2">
-                    <a class="reference internal" href="Concepts/Basic.html"
-                      >Basic Concepts</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Nodes.html"
-                          >Nodes</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Discovery.html"
-                          >Discovery</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Interfaces.html"
-                          >Interfaces</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Topics.html"
-                          >Topics</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Services.html"
-                          >Services</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Actions.html"
-                          >Actions</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Parameters.html"
-                          >Parameters</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Command-Line-Tools.html"
-                          >Introspection with command line tools</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Launch.html"
-                          >Launch</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Basic/About-Client-Libraries.html"
-                          >Client libraries</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Concepts/Intermediate.html"
-                      >Intermediate Concepts</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Domain-ID.html"
-                          >The ROS_DOMAIN_ID</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Different-Middleware-Vendors.html"
-                          >Different ROS 2 middleware vendors</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Logging.html"
-                          >Logging and logger configuration</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Quality-of-Service-Settings.html"
-                          >Quality of Service settings</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Executors.html"
-                          >Executors</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Topic-Statistics.html"
-                          >Topic statistics</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-RQt.html"
-                          >Overview and usage of RQt</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Composition.html"
-                          >Composition</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Cross-Compilation.html"
-                          >Cross-compilation</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Security.html"
-                          >ROS 2 Security</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Intermediate/About-Tf2.html"
-                          >Tf2</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a class="reference internal" href="Concepts/Advanced.html"
-                      >Advanced Concepts</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Advanced/About-Build-System.html"
-                          >The build system</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Advanced/About-Internal-Interfaces.html"
-                          >Internal ROS 2 interfaces</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="Concepts/Advanced/About-Middleware-Implementations.html"
-                          >ROS 2 middleware implementations</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="toctree-l1">
-                <a class="reference internal" href="Contact.html">Contact</a>
-              </li>
-              <li class="toctree-l1">
-                <a class="reference internal" href="The-ROS2-Project.html"
-                  >The ROS 2 Project</a
-                >
-                <ul>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/Contributing.html"
-                      >Contributing</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Contributing/Developer-Guide.html"
-                          >ROS 2 developer guide</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Contributing/Code-Style-Language-Versions.html"
-                          >Code style and language versions</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Contributing/Quality-Guide.html"
-                          >Quality guide: ensuring code quality</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Contributing/Build-Farms.html"
-                          >ROS Build Farms</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Contributing/Windows-Tips-and-Tricks.html"
-                          >Windows Tips and Tricks</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Contributing/Contributing-To-ROS-2-Documentation.html"
-                          >Contributing to ROS 2 Documentation</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/Features.html"
-                      >Features Status</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/Feature-Ideas.html"
-                      >Feature Ideas</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/Roadmap.html"
-                      >Roadmap</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/ROSCon-Content.html"
-                      >ROSCon Talks</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/Governance.html"
-                      >Project Governance</a
-                    >
-                    <ul>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Governance/ROS2-TSC-Charter.html"
-                          >ROS 2 Technical Steering Committee Charter</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Governance/ROS2-TSC-Intake-process.html"
-                          >ROS 2 TSC applicant intake process</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Governance/Working-Groups.html"
-                          >About Working Groups</a
-                        >
-                      </li>
-                      <li class="toctree-l3">
-                        <a
-                          class="reference internal"
-                          href="The-ROS2-Project/Governance/How-To-Start-A-Community-Working-Group.html"
-                          >How to Start a Community Working Group</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/Marketing.html"
-                      >Marketing</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="The-ROS2-Project/Metrics.html"
-                      >Metrics</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="toctree-l1">
-                <a class="reference internal" href="Package-Docs.html"
-                  >Package Docs</a
-                >
-              </li>
-              <li class="toctree-l1">
-                <a class="reference internal" href="Related-Projects.html"
-                  >Related Projects</a
-                >
-                <ul>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Related-Projects/Intel-ROS2-Projects.html"
-                      >Intel ROS 2 Projects</a
-                    >
-                  </li>
-                  <li class="toctree-l2">
-                    <a
-                      class="reference internal"
-                      href="Related-Projects/Nvidia-ROS2-Projects.html"
-                      >NVIDIA ROS 2 Projects</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="toctree-l1">
-                <a class="reference internal" href="Glossary.html">Glossary</a>
-              </li>
-              <li class="toctree-l1">
-                <a class="reference internal" href="Citations.html"
-                  >Citations</a
-                >
-              </li>
-              -->
             </ul>
           </div>
         </div>
@@ -2064,7 +224,9 @@
                     aria-label="Home"
                   ></a>
                 </li>
-                <li class="breadcrumb-item active">ROS (Robot Operating System) Course - Dr. Vijay Kumar Jadon</li>
+                <li class="breadcrumb-item active">
+                  ROS (Robot Operating System) Course - Dr. Vijay Kumar Jadon
+                </li>
                 <li class="wy-breadcrumbs-aside">
                   <a
                     href="https://github.com/vkjadon"
@@ -2094,7 +256,10 @@
                       ></a
                     >
                   </h1>
-                  <img src="../img/ROS2.png" alt="ROS (Robot Operating System)">
+                  <img
+                    src="../img/ROS2.png"
+                    alt="ROS (Robot Operating System)"
+                  />
                   <!-- Robots -->
                   <section id="Robots">
                     <h2>
@@ -2105,10 +270,21 @@
                         ></a
                       >
                     </h2>
-                    <p>A robot is an integrated system made up of sensors, actuators, controllers, power supply and software which work co-dependently to perform a task.</p>
-                    <p>Robotics Industry Association (RIA) defines robots as a re-programmable, multifunctional manipulator designed to move material, parts, tools or specialized devices through variable programmed motion for a variety of tasks.</p>
                     <p>
-                      It uses multi disciplinary approach and requires basic understanding of Physics, Mathematics, Engineering, Computing etc.
+                      A robot is an integrated system made up of sensors,
+                      actuators, controllers, power supply and software which
+                      work co-dependently to perform a task.
+                    </p>
+                    <p>
+                      Robotics Industry Association (RIA) defines robots as a
+                      re-programmable, multifunctional manipulator designed to
+                      move material, parts, tools or specialized devices through
+                      variable programmed motion for a variety of tasks.
+                    </p>
+                    <p>
+                      It uses multi disciplinary approach and requires basic
+                      understanding of Physics, Mathematics, Engineering,
+                      Computing etc.
                     </p>
                   </section>
                   <!-- Characteristics of Robots -->
@@ -2121,25 +297,28 @@
                         ></a
                       >
                     </h2>
-                    <p>Robot is a machine but all machines are not robots as it should possess certain anthropomorphic characteristics.</p>
+                    <p>
+                      Robot is a machine but all machines are not robots as it
+                      should possess certain anthropomorphic characteristics.
+                    </p>
                     <!-- Sensing -->
                     <h3>Sensing</h3>
                     <ul class="simple">
-                    <li>
-                      <p>Light Sensor - Eyes</p>
-                    </li>
-                    <li>
-                      <p>Touch Sensor - Hand</p>
-                    </li>
-                    <li>
-                      <p>Chemical Sensor - Nose</p>
-                    </li>
-                    <li>
-                      <p>Sonar Sensor - Ear</p>
-                    </li>
-                    <li>
-                      <p>Taste Sensor - Tongue</p>
-                    </li>
+                      <li>
+                        <p>Light Sensor - Eyes</p>
+                      </li>
+                      <li>
+                        <p>Touch Sensor - Hand</p>
+                      </li>
+                      <li>
+                        <p>Chemical Sensor - Nose</p>
+                      </li>
+                      <li>
+                        <p>Sonar Sensor - Ear</p>
+                      </li>
+                      <li>
+                        <p>Taste Sensor - Tongue</p>
+                      </li>
                     </ul>
                     <!-- Movement -->
                     <h3>Movement</h3>
@@ -2192,56 +371,106 @@
                       >
                     </h2>
                     <h3>Sensors:</h3>
-                    <img src="../img/Robot1.jpg" alt="Sensors Robot">
-                    <p>Sensors are used to collect information about the internal state of the robot or to communicate with the outside environment. Robots are often equipped with external sensory devices such as a vision system, touch and tactile sensors etc. which help to communicate with the environment.</p>
+                    <img src="../img/Robot1.jpg" alt="Sensors Robot" />
+                    <p>
+                      Sensors are used to collect information about the internal
+                      state of the robot or to communicate with the outside
+                      environment. Robots are often equipped with external
+                      sensory devices such as a vision system, touch and tactile
+                      sensors etc. which help to communicate with the
+                      environment.
+                    </p>
                     <h3>Actuators:</h3>
-                    <img src="../img/Robot2.jpg" alt="Actuators Robot">
-                    <p>Actuators are the muscles of the manipulators. Common types of actuators are servomotors, stepper motors, pneumatic cylinders etc.</p>
+                    <img src="../img/Robot2.jpg" alt="Actuators Robot" />
+                    <p>
+                      Actuators are the muscles of the manipulators. Common
+                      types of actuators are servomotors, stepper motors,
+                      pneumatic cylinders etc.
+                    </p>
                     <h3>Controller:</h3>
-                    <img src="../img/Robot3.jpg" alt="Controller Robot">
-                    <p>The controller receives data from the computer, controls the motions of the actuator and coordinates these motions with the sensory feedback information.</p>
+                    <img src="../img/Robot3.jpg" alt="Controller Robot" />
+                    <p>
+                      The controller receives data from the computer, controls
+                      the motions of the actuator and coordinates these motions
+                      with the sensory feedback information.
+                    </p>
                   </section>
                   <!-- Multidisciplinary Knowledge -->
                   <section id="MultidisciplinaryKnowledge">
-                    <h2>Multidisciplinary Knowledge<a
-                      class="headerlink"
-                      href="#MultidisciplinaryKnowledge"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/MultidisciplinaryKnowledge.jpg" alt="Multidisciplinary Knowledge">
+                    <h2>
+                      Multidisciplinary Knowledge<a
+                        class="headerlink"
+                        href="#MultidisciplinaryKnowledge"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/MultidisciplinaryKnowledge.jpg"
+                      alt="Multidisciplinary Knowledge"
+                    />
                     <h3>Modeling:</h3>
-                    <p>Understanding the physical principles behind the flight dynamics of aerial robotics and develop the capacity to derive their mathematical model.</p>
+                    <p>
+                      Understanding the physical principles behind the flight
+                      dynamics of aerial robotics and develop the capacity to
+                      derive their mathematical model.
+                    </p>
                     <h3>State Estimation:</h3>
-                    <p>On-board estimation of the vehicle full pose (position and orientation) takes place.</p>
+                    <p>
+                      On-board estimation of the vehicle full pose (position and
+                      orientation) takes place.
+                    </p>
                     <h3>Robot Controls:</h3>
                     <p>Design high-performance flight controllers.</p>
                     <h3>Motion Planning:</h3>
-                    <p>Develop algorithms for autonomous motion planning for aerial robotics.</p>
+                    <p>
+                      Develop algorithms for autonomous motion planning for
+                      aerial robotics.
+                    </p>
                   </section>
                   <!-- Autonomous Robots -->
                   <section id="AutonomousRobots">
-                    <h2>Autonomous Robots<a
-                      class="headerlink"
-                      href="#AutonomousRobots"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/AutonomousRobots3.jpg" alt="Autonomous Robots 3">
-                    <p>Autonomous Robot has ability to move from its location to goal location using sensor information.</p>
-                    <img src="../img/AutonomousRobots1.jpg" alt="Autonomous Robots 1">
-                    <p>The robot localizes using sensor data and updating its <span style="color:red">belief state</span> with respect to the environment map.</p>
-                    <img src="../img/AutonomousRobots2.jpg" alt="Autonomous Robots 2">
+                    <h2>
+                      Autonomous Robots<a
+                        class="headerlink"
+                        href="#AutonomousRobots"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/AutonomousRobots3.jpg"
+                      alt="Autonomous Robots 3"
+                    />
+                    <p>
+                      Autonomous Robot has ability to move from its location to
+                      goal location using sensor information.
+                    </p>
+                    <img
+                      src="../img/AutonomousRobots1.jpg"
+                      alt="Autonomous Robots 1"
+                    />
+                    <p>
+                      The robot localizes using sensor data and updating its
+                      <span style="color: red">belief state</span> with respect
+                      to the environment map.
+                    </p>
+                    <img
+                      src="../img/AutonomousRobots2.jpg"
+                      alt="Autonomous Robots 2"
+                    />
                   </section>
                   <!-- Why ROS -->
                   <section id="WhyROS">
-                    <h2>Why ROS<a
-                      class="headerlink"
-                      href="#WhyROS"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/WhyROS.jpg" alt="WhyROS">
+                    <h2>
+                      Why ROS<a
+                        class="headerlink"
+                        href="#WhyROS"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img src="../img/WhyROS.jpg" alt="WhyROS" />
                     <p>Start building software that is already exists:</p>
                     <ul>
                       <li>Lack of standards</li>
@@ -2249,223 +478,522 @@
                       <li>Keep re-coding standard algorithms</li>
                       <li>Re-coding (mostly) from scratch for any new Robot</li>
                     </ul>
-                    <p><strong>ROS was developed to provide a standardized, open-source framework for building robot software.</strong></p>
+                    <p>
+                      <strong
+                        >ROS was developed to provide a standardized,
+                        open-source framework for building robot
+                        software.</strong
+                      >
+                    </p>
                   </section>
                   <!-- Robot Operating System -->
                   <section id="RobotOperatingSystem">
-                    <h2>Robot Operating System<a
-                      class="headerlink"
-                      href="#RobotOperatingSystem"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
+                    <h2>
+                      Robot Operating System<a
+                        class="headerlink"
+                        href="#RobotOperatingSystem"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
                     <ul>
-                      <li>ROS is a meta (after or beyond) operating system that runs on the existing operating system.</li>
-                      <li>It provides a set of tools, libraries, and <span style="color: red;">conventions</span> that make it easier to develop, test, and deploy robot systems.</li>
-                      <li>ROS provides a way to separate codes in <span style="color: red;">reusable blocks</span> along with a set of <span style="color: red;">communication tools</span> to easily communicate between all the codes.</li>
-                      <li>The development of ROS (Robot Operating System) began in 2007 at Willow Garage, a robotics research lab in California, USA.</li>
-                      <li>The first version of ROS, ROS 1, was released in <span style="color: red;">2010</span>.</li>
-                      <li>Since 2013, it is managed by Open Source  Robotics Foundation (<span style="color: red;">OSRF</span>).</li>
-                      <li>ROS 1  has limited real-time performance and difficulty in <span style="color: red;">integrating with non-ROS systems</span>.</li>
-                      <li>This led to the development of ROS 2, which was released in <span style="color: red;">2017</span>.</li>
+                      <li>
+                        ROS is a meta (after or beyond) operating system that
+                        runs on the existing operating system.
+                      </li>
+                      <li>
+                        It provides a set of tools, libraries, and
+                        <span style="color: red">conventions</span> that make it
+                        easier to develop, test, and deploy robot systems.
+                      </li>
+                      <li>
+                        ROS provides a way to separate codes in
+                        <span style="color: red">reusable blocks</span> along
+                        with a set of
+                        <span style="color: red">communication tools</span> to
+                        easily communicate between all the codes.
+                      </li>
+                      <li>
+                        The development of ROS (Robot Operating System) began in
+                        2007 at Willow Garage, a robotics research lab in
+                        California, USA.
+                      </li>
+                      <li>
+                        The first version of ROS, ROS 1, was released in
+                        <span style="color: red">2010</span>.
+                      </li>
+                      <li>
+                        Since 2013, it is managed by Open Source Robotics
+                        Foundation (<span style="color: red">OSRF</span>).
+                      </li>
+                      <li>
+                        ROS 1 has limited real-time performance and difficulty
+                        in
+                        <span style="color: red"
+                          >integrating with non-ROS systems</span
+                        >.
+                      </li>
+                      <li>
+                        This led to the development of ROS 2, which was released
+                        in <span style="color: red">2017</span>.
+                      </li>
                     </ul>
                   </section>
                   <!-- Robot Integration Capabilities -->
                   <section id="RobotIntegrationCapabilities">
-                    <h2>Robot Integration Capabilities<a
-                      class="headerlink"
-                      href="#RobotIntegrationCapabilities"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/RobotIntegrationCapabilities.png" alt="RobotIntegrationCapabilities">
+                    <h2>
+                      Robot Integration Capabilities<a
+                        class="headerlink"
+                        href="#RobotIntegrationCapabilities"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/RobotIntegrationCapabilities.png"
+                      alt="RobotIntegrationCapabilities"
+                    />
                     <ul>
                       <li>Free & open source, community-based, repositories</li>
-                      <li>The power of streamlined development and deployment of robotic systems across the domains enhance the ROS versatility and applicability.</li>
-                      <li>ROS facilitates the integration of cameras, LIDAR, and other sensors for monitoring application.</li>
-                      <li>User contributed packages help the implementation of  specific functionality such as SLAM, planning,  perception, vision, manipulation, etc.</li>
-                      <li>There are many small, generic programs that perform tasks such as  visualization, logging, plotting data streams, etc.</li>
-                      <li>Its modular framework allows for testing and integration of different components such as path planning, object recognition, sensor integration, human-robot interaction etc.</li>
+                      <li>
+                        The power of streamlined development and deployment of
+                        robotic systems across the domains enhance the ROS
+                        versatility and applicability.
+                      </li>
+                      <li>
+                        ROS facilitates the integration of cameras, LIDAR, and
+                        other sensors for monitoring application.
+                      </li>
+                      <li>
+                        User contributed packages help the implementation of
+                        specific functionality such as SLAM, planning,
+                        perception, vision, manipulation, etc.
+                      </li>
+                      <li>
+                        There are many small, generic programs that perform
+                        tasks such as visualization, logging, plotting data
+                        streams, etc.
+                      </li>
+                      <li>
+                        Its modular framework allows for testing and integration
+                        of different components such as path planning, object
+                        recognition, sensor integration, human-robot interaction
+                        etc.
+                      </li>
                     </ul>
                   </section>
                   <!-- Currently Supported Distributions -->
                   <section id="CurrentlySupportedDistributions">
-                    <h2>Currently Supported Distributions<a
-                      class="headerlink"
-                      href="#CurrentlySupportedDistributions"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/CurrentlySupportedDistributions.png" alt="Currently Supported Distributions">
-                    <p><a href="http://docs.ros.org/en/rolling/Releases.html">http://docs.ros.org/en/rolling/Releases.html</a></p>
+                    <h2>
+                      Currently Supported Distributions<a
+                        class="headerlink"
+                        href="#CurrentlySupportedDistributions"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/CurrentlySupportedDistributions.png"
+                      alt="Currently Supported Distributions"
+                    />
+                    <p>
+                      <a href="http://docs.ros.org/en/rolling/Releases.html"
+                        >http://docs.ros.org/en/rolling/Releases.html</a
+                      >
+                    </p>
                   </section>
                   <!-- About ROS Features -->
                   <section id="AboutROSFeatures">
-                    <h2>About ROS Features<a
-                      class="headerlink"
-                      href="#AboutROSFeatures"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
+                    <h2>
+                      About ROS Features<a
+                        class="headerlink"
+                        href="#AboutROSFeatures"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
                     <ul>
-                      <li>ROS systems consist of many small programs (nodes) which  connect to each other and continuously exchange messages.</li>
-                      <li>ROS as OS helps the implementation of commonly used functionality such as message-passing between processes, package management etc.</li>
-                      <li>ROS software modules can be written in any language for which a  client library has been written. Currently client libraries exist for C++,  Python, LISP, Java, JavaScript, MATLAB, Ruby, and more.</li>
-                      <li>The ROS conventions encourage contributors to create stand-alone  libraries/packages and then wrap those libraries so they send and  receive messages to/from other ROS modules.</li>
+                      <li>
+                        ROS systems consist of many small programs (nodes) which
+                        connect to each other and continuously exchange
+                        messages.
+                      </li>
+                      <li>
+                        ROS as OS helps the implementation of commonly used
+                        functionality such as message-passing between processes,
+                        package management etc.
+                      </li>
+                      <li>
+                        ROS software modules can be written in any language for
+                        which a client library has been written. Currently
+                        client libraries exist for C++, Python, LISP, Java,
+                        JavaScript, MATLAB, Ruby, and more.
+                      </li>
+                      <li>
+                        The ROS conventions encourage contributors to create
+                        stand-alone libraries/packages and then wrap those
+                        libraries so they send and receive messages to/from
+                        other ROS modules.
+                      </li>
                     </ul>
                   </section>
                   <!-- ROS Applications -->
                   <section id="ROSApplications">
-                    <h2>ROS Applications<a
-                      class="headerlink"
-                      href="#ROSApplications"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/ROSApplications.jpg" alt="ROS Applications">
+                    <h2>
+                      ROS Applications<a
+                        class="headerlink"
+                        href="#ROSApplications"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/ROSApplications.jpg"
+                      alt="ROS Applications"
+                    />
                     <ul>
-                      <li>Waymo, Tesla, Google etc., use ROS for developing perception, planning, and control algorithms in self-driving cars.</li>
-                      <li>Whereas, Fetch Robotics and Amazon Robotics use ROS to navigate warehouses, pick items, and optimize inventory management.</li>
-                      <li>Agricultural robots, developed by companies like Blue River Technology and Agrobot, use ROS for crop monitoring, precision spraying, and harvesting.</li>
-                      <li>Industrial robots from Universal Robots and ABB, use ROS for tasks like assembly, welding, and inspection.</li>
-                      <li>Drones and ground robots, employ ROS for navigation, data collection, and analysis.</li>
-                      <li>ROS is also finding its applications for tasks such as customer interaction, information provision, and entertainment.</li>
-                      <li>ROS also supports speech recognition, natural language processing, and gesture control.</li>
+                      <li>
+                        Waymo, Tesla, Google etc., use ROS for developing
+                        perception, planning, and control algorithms in
+                        self-driving cars.
+                      </li>
+                      <li>
+                        Whereas, Fetch Robotics and Amazon Robotics use ROS to
+                        navigate warehouses, pick items, and optimize inventory
+                        management.
+                      </li>
+                      <li>
+                        Agricultural robots, developed by companies like Blue
+                        River Technology and Agrobot, use ROS for crop
+                        monitoring, precision spraying, and harvesting.
+                      </li>
+                      <li>
+                        Industrial robots from Universal Robots and ABB, use ROS
+                        for tasks like assembly, welding, and inspection.
+                      </li>
+                      <li>
+                        Drones and ground robots, employ ROS for navigation,
+                        data collection, and analysis.
+                      </li>
+                      <li>
+                        ROS is also finding its applications for tasks such as
+                        customer interaction, information provision, and
+                        entertainment.
+                      </li>
+                      <li>
+                        ROS also supports speech recognition, natural language
+                        processing, and gesture control.
+                      </li>
                     </ul>
                   </section>
                   <!-- ROS2 Concepts, Tools and Technologies -->
                   <section id="ROS2ConceptsToolsandTechnologies">
-                    <h2>ROS2 Concepts, Tools and Technologies<a
-                      class="headerlink"
-                      href="#ROS2ConceptsToolsandTechnologies"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/ROS2ConceptsToolsandTechnologies.jpg" alt="ROS2ConceptsToolsandTechnologies">
+                    <h2>
+                      ROS2 Concepts, Tools and Technologies<a
+                        class="headerlink"
+                        href="#ROS2ConceptsToolsandTechnologies"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/ROS2ConceptsToolsandTechnologies.jpg"
+                      alt="ROS2ConceptsToolsandTechnologies"
+                    />
                   </section>
                   <!-- Current Distributions -->
                   <section id="CurrentDistributions">
-                    <h2>Current Distributions<a
-                      class="headerlink"
-                      href="#CurrentDistributions"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <p><a href="http://docs.ros.org/en/rolling/Releases.html">http://docs.ros.org/en/rolling/Releases.html</a></p>
-                    <img src="../img/CurrentDistributions.png" alt="Current Distributions">
+                    <h2>
+                      Current Distributions<a
+                        class="headerlink"
+                        href="#CurrentDistributions"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <p>
+                      <a href="http://docs.ros.org/en/rolling/Releases.html"
+                        >http://docs.ros.org/en/rolling/Releases.html</a
+                      >
+                    </p>
+                    <img
+                      src="../img/CurrentDistributions.png"
+                      alt="Current Distributions"
+                    />
                   </section>
                   <!-- Docs : Installation Guide -->
                   <section id="DocsInstallationGuide">
-                    <h2>Docs : Installation Guide<a
-                      class="headerlink"
-                      href="#DocsInstallationGuide"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/DocsInstallationGuide.png" alt="DocsInstallationGuide">
-                    <p><a href="https://docs.ros.org/en/humble/Installation.html">https://docs.ros.org/en/humble/Installation.html</a></p>
+                    <h2>
+                      Docs : Installation Guide<a
+                        class="headerlink"
+                        href="#DocsInstallationGuide"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/DocsInstallationGuide.png"
+                      alt="DocsInstallationGuide"
+                    />
+                    <p>
+                      <a href="https://docs.ros.org/en/humble/Installation.html"
+                        >https://docs.ros.org/en/humble/Installation.html</a
+                      >
+                    </p>
                   </section>
                   <!-- Ubuntu -->
                   <section id="Ubuntu">
-                    <h2>Ubuntu<a
-                      class="headerlink"
-                      href="#Ubuntu"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/Ubuntu.jpg" alt="Ubuntu">
-                    <p>Ubuntu is a popular distribution (or "distro") of Linux</p>
-                    <p>Ubuntu is based on the GNU/Linux OS and combines the Linux kernel with a set of GNU utilities and libraries.</p>
-                    <p>The Linux kernel is responsible for managing hardware, running processes, and handling system resources.</p>
-                    <p>Ubuntu is built on the Debian distribution of Linux. Debian was first announced by Ian Murdock in 1993.</p>
-                    <p>Ubuntu takes the core components of Debian and adds its own enhancements, software, and user interface improvements.</p>
+                    <h2>
+                      Ubuntu<a
+                        class="headerlink"
+                        href="#Ubuntu"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img src="../img/Ubuntu.jpg" alt="Ubuntu" />
+                    <p>
+                      Ubuntu is a popular distribution (or "distro") of Linux
+                    </p>
+                    <p>
+                      Ubuntu is based on the GNU/Linux OS and combines the Linux
+                      kernel with a set of GNU utilities and libraries.
+                    </p>
+                    <p>
+                      The Linux kernel is responsible for managing hardware,
+                      running processes, and handling system resources.
+                    </p>
+                    <p>
+                      Ubuntu is built on the Debian distribution of Linux.
+                      Debian was first announced by Ian Murdock in 1993.
+                    </p>
+                    <p>
+                      Ubuntu takes the core components of Debian and adds its
+                      own enhancements, software, and user interface
+                      improvements.
+                    </p>
                     <p>Ubuntu is developed and maintained by Canonical Ltd.</p>
-                    <p>Ubuntu is open source and has a large and active community.</p>
+                    <p>
+                      Ubuntu is open source and has a large and active
+                      community.
+                    </p>
                   </section>
                   <!-- Download -->
                   <section id="Download">
-                    <h2>Download<a
-                      class="headerlink"
-                      href="#Download"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/Download.png" alt="Download">
-                    <p><a href="https://releases.ubuntu.com/">https://releases.ubuntu.com/</a></p>
-                    <img src="../img/Download2.png" alt="Download2">
-                    <p><a href="https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview">https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview</a></p>
-                    <img src="../img/Download3.png" alt="Download3">
+                    <h2>
+                      Download<a
+                        class="headerlink"
+                        href="#Download"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img src="../img/Download.png" alt="Download" />
+                    <p>
+                      <a href="https://releases.ubuntu.com/"
+                        >https://releases.ubuntu.com/</a
+                      >
+                    </p>
+                    <img src="../img/Download2.png" alt="Download2" />
+                    <p>
+                      <a
+                        href="https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview"
+                        >https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview</a
+                      >
+                    </p>
+                    <img src="../img/Download3.png" alt="Download3" />
                   </section>
                   <!-- Bootable Drive -->
                   <section id="BootableDrive">
-                    <h2>Bootable Drive<a
-                      class="headerlink"
-                      href="#BootableDrive"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/BootableDrive.png" alt="BootableDrive">
-                    <img src="../img/BootableDrive2.png" alt="BootableDrive2">
-                    <img src="../img/BootableDrive3.png" alt="BootableDrive3">
-                    <img src="../img/BootableDrive4.png" alt="BootableDrive4">
-                    <img src="../img/BootableDrive5.png" alt="BootableDrive5">
-                    <img src="../img/BootableDrive6.png" alt="BootableDrive6">
+                    <h2>
+                      Bootable Drive<a
+                        class="headerlink"
+                        href="#BootableDrive"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img src="../img/BootableDrive.png" alt="BootableDrive" />
+                    <img src="../img/BootableDrive2.png" alt="BootableDrive2" />
+                    <img src="../img/BootableDrive3.png" alt="BootableDrive3" />
+                    <img src="../img/BootableDrive4.png" alt="BootableDrive4" />
+                    <img src="../img/BootableDrive5.png" alt="BootableDrive5" />
+                    <img src="../img/BootableDrive6.png" alt="BootableDrive6" />
                   </section>
                   <!-- Creating Virtual Machine -->
                   <section id="CreatingVirtualMachine">
-                    <h2>Creating Virtual Machine<a
-                      class="headerlink"
-                      href="#CreatingVirtualMachine"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <img src="../img/CreatingVirtualMachine.jpg" alt="CreatingVirtualMachine">
-                    <p><a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a></p>
-                    <img src="../img/virtualbox.png" alt="virtualbox">
-                    <img src="../img/CreatingVirtualMachine2.png" alt="CreatingVirtualMachine">
-                    <img src="../img/CreatingVirtualMachine3.png" alt="CreatingVirtualMachine">
-                    <p><strong>Name:</strong> Assign an informative name that describes the OS and software running on the VM. For example, a name such as "Ubuntu22.04-ROS".</p>
-                    <p><strong>Folder:</strong> The location where VMs are stored on your computer, called the <em>machine folder</em>.</p>
-                    <p><strong>ISO Image:</strong> Select an ISO image file. The image file should be downloaded before creating New VM.</p>
-                    <p><strong>Type and Version:</strong> These fields are used to select the OS that you want to install on the new virtual machine.</p>
-                    <p>If an ISO image is selected and Oracle VM VirtualBox detects the operating system for the ISO, the <strong>Type</strong> and <strong>Version</strong> fields are populated automatically and are disabled.</p>
-                    <img src="../img/CreatingVirtualMachine4.png" alt="CreatingVirtualMachine4">
-                    <p><strong>Base Memory:</strong> The amount of memory selected here will be taken away from your host machine.</p>
-                    <p>The memory you give to the VM will not be available to your host OS while the VM is running.</p>
-                    <p>You can change this setting later, after you have created the VM.</p>
-                    <p><strong>Processor(s):</strong> Select the number of virtual processors to assign to the VM.</p>
-                    <img src="../img/CreatingVirtualMachine5.png" alt="CreatingVirtualMachine5">
-                    <p><strong>Disk Size:</strong> maximum size for the hard disk in the new VM</p>
-                    <p><strong>Pre-Allocate Full Size:</strong> Select to opt a fixed-size file for the disk image. Deselect to opt a <em>dynamically allocated file</em> for the disk image.</p>
-                    <p><strong>Dynamically allocated file:</strong> Image file only grows when we store data on its virtual hard disk. So, it is initially small and grows with as per use.</p>
-                    <p><strong>Fixed-size file:</strong> This type of image file immediately occupies the file specified. While occupying much more space, it is slightly faster than a dynamically allocated file.</p>
-                    <img src="../img/CreatingVirtualMachine6.png" alt="CreatingVirtualMachine6">
-                    <img src="../img/CreatingVirtualMachine7.png" alt="CreatingVirtualMachine7">
-                    <p><strong>Save the machine state:</strong> VirtualBox <em>freezes</em> the virtual machine by completely saving its state to your local disk. All the programs are open and resumes operation once restarted. </p>
-                    <p><strong>Send the shutdown signal:</strong> This has the same effect as of pressing the power button on a computer. This will trigger a shutdown mechanism from within the VM.</p>
-                    <p><strong>Power off the machine:</strong> With this option, Oracle VM VirtualBox also stops running the virtual machine, but <em>without</em> saving its state.</p>
+                    <h2>
+                      Creating Virtual Machine<a
+                        class="headerlink"
+                        href="#CreatingVirtualMachine"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <img
+                      src="../img/CreatingVirtualMachine.jpg"
+                      alt="CreatingVirtualMachine"
+                    />
+                    <p>
+                      <a href="https://www.virtualbox.org/"
+                        >https://www.virtualbox.org/</a
+                      >
+                    </p>
+                    <img src="../img/virtualbox.png" alt="virtualbox" />
+                    <img
+                      src="../img/CreatingVirtualMachine2.png"
+                      alt="CreatingVirtualMachine"
+                    />
+                    <img
+                      src="../img/CreatingVirtualMachine3.png"
+                      alt="CreatingVirtualMachine"
+                    />
+                    <p>
+                      <strong>Name:</strong> Assign an informative name that
+                      describes the OS and software running on the VM. For
+                      example, a name such as "Ubuntu22.04-ROS".
+                    </p>
+                    <p>
+                      <strong>Folder:</strong> The location where VMs are stored
+                      on your computer, called the <em>machine folder</em>.
+                    </p>
+                    <p>
+                      <strong>ISO Image:</strong> Select an ISO image file. The
+                      image file should be downloaded before creating New VM.
+                    </p>
+                    <p>
+                      <strong>Type and Version:</strong> These fields are used
+                      to select the OS that you want to install on the new
+                      virtual machine.
+                    </p>
+                    <p>
+                      If an ISO image is selected and Oracle VM VirtualBox
+                      detects the operating system for the ISO, the
+                      <strong>Type</strong> and <strong>Version</strong> fields
+                      are populated automatically and are disabled.
+                    </p>
+                    <img
+                      src="../img/CreatingVirtualMachine4.png"
+                      alt="CreatingVirtualMachine4"
+                    />
+                    <p>
+                      <strong>Base Memory:</strong> The amount of memory
+                      selected here will be taken away from your host machine.
+                    </p>
+                    <p>
+                      The memory you give to the VM will not be available to
+                      your host OS while the VM is running.
+                    </p>
+                    <p>
+                      You can change this setting later, after you have created
+                      the VM.
+                    </p>
+                    <p>
+                      <strong>Processor(s):</strong> Select the number of
+                      virtual processors to assign to the VM.
+                    </p>
+                    <img
+                      src="../img/CreatingVirtualMachine5.png"
+                      alt="CreatingVirtualMachine5"
+                    />
+                    <p>
+                      <strong>Disk Size:</strong> maximum size for the hard disk
+                      in the new VM
+                    </p>
+                    <p>
+                      <strong>Pre-Allocate Full Size:</strong> Select to opt a
+                      fixed-size file for the disk image. Deselect to opt a
+                      <em>dynamically allocated file</em> for the disk image.
+                    </p>
+                    <p>
+                      <strong>Dynamically allocated file:</strong> Image file
+                      only grows when we store data on its virtual hard disk.
+                      So, it is initially small and grows with as per use.
+                    </p>
+                    <p>
+                      <strong>Fixed-size file:</strong> This type of image file
+                      immediately occupies the file specified. While occupying
+                      much more space, it is slightly faster than a dynamically
+                      allocated file.
+                    </p>
+                    <img
+                      src="../img/CreatingVirtualMachine6.png"
+                      alt="CreatingVirtualMachine6"
+                    />
+                    <img
+                      src="../img/CreatingVirtualMachine7.png"
+                      alt="CreatingVirtualMachine7"
+                    />
+                    <p>
+                      <strong>Save the machine state:</strong> VirtualBox
+                      <em>freezes</em> the virtual machine by completely saving
+                      its state to your local disk. All the programs are open
+                      and resumes operation once restarted.
+                    </p>
+                    <p>
+                      <strong>Send the shutdown signal:</strong> This has the
+                      same effect as of pressing the power button on a computer.
+                      This will trigger a shutdown mechanism from within the VM.
+                    </p>
+                    <p>
+                      <strong>Power off the machine:</strong> With this option,
+                      Oracle VM VirtualBox also stops running the virtual
+                      machine, but <em>without</em> saving its state.
+                    </p>
                   </section>
                   <!-- Command : sudo -->
                   <section id="Commandsudo">
-                    <h2>Command : sudo<a
-                      class="headerlink"
-                      href="#Commandsudo"
-                      title="Link to this heading"
-                      ></a
-                    ></h2>
-                    <p>The <em><span style="color: blue;">sudo</span></em> command in Linux and other Unix-like operating systems stands for "superuser do."</p>
+                    <h2>
+                      Command : sudo<a
+                        class="headerlink"
+                        href="#Commandsudo"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <p>
+                      The <em><span style="color: blue">sudo</span></em> command
+                      in Linux and other Unix-like operating systems stands for
+                      "superuser do."
+                    </p>
                     <pre><code style="color: red;">sudo apt update</code></pre>
                     <pre><code style="color: red;">sudo apt upgrade</code></pre>
                     <pre><code style="color: red;">sudo apt install build-essential gcc make perl dkms</code></pre>
-                    <p><strong>build-essential:</strong> This package includes a collection of tools for building software.</p>
-                    <p><strong>gcc:</strong> The GNU Compiler Collection supporting various programming languages.</p>
-                    <p><strong>make:</strong> A build automation tool that automatically builds executable programs and libraries from source code by reading files called Makefiles.</p>
-                    <p><strong>perl:</strong> A high-level, general-purpose, interpreted programming language often used for system administration, web development, and network programming.</p>
-                    <p><strong>dkms:</strong> Dynamic Kernel Module Support, a framework that allows kernel modules to be dynamically built for each kernel version installed on a system.</p>
-                    <img src="../img/UbuntuDebian.png" alt="Ubuntu (Debian)">
-                    <img src="../img/Setupsources.png" alt="Setup Sources">
-                    <img src="../img/InstallROS2Packages.png" alt="Install ROS2 Packages">
-                    <p><img src="../img/DesktopInstall.png" alt="Desktop Install"></p>
+                    <p>
+                      <strong>build-essential:</strong> This package includes a
+                      collection of tools for building software.
+                    </p>
+                    <p>
+                      <strong>gcc:</strong> The GNU Compiler Collection
+                      supporting various programming languages.
+                    </p>
+                    <p>
+                      <strong>make:</strong> A build automation tool that
+                      automatically builds executable programs and libraries
+                      from source code by reading files called Makefiles.
+                    </p>
+                    <p>
+                      <strong>perl:</strong> A high-level, general-purpose,
+                      interpreted programming language often used for system
+                      administration, web development, and network programming.
+                    </p>
+                    <p>
+                      <strong>dkms:</strong> Dynamic Kernel Module Support, a
+                      framework that allows kernel modules to be dynamically
+                      built for each kernel version installed on a system.
+                    </p>
+                    <img src="../img/UbuntuDebian.png" alt="Ubuntu (Debian)" />
+                    <img src="../img/Setupsources.png" alt="Setup Sources" />
+                    <img
+                      src="../img/InstallROS2Packages.png"
+                      alt="Install ROS2 Packages"
+                    />
+                    <p>
+                      <img
+                        src="../img/DesktopInstall.png"
+                        alt="Desktop Install"
+                      />
+                    </p>
                   </section>
                   <!-- Thank You -->
                   <p>Thank You. End of Introduction of ROS</p>
@@ -2508,7 +1036,11 @@
 
               <div role="contentinfo">
                 <p>Copyright &#169; 2024, Dr. Vijay Kumar Jadon</p>
-                <p><a href="https://yogeshverma.info/" target="_blank">Developed by Yogesh Verma</a></p>
+                <p>
+                  <a href="https://yogeshverma.info/" target="_blank"
+                    >Developed by Yogesh Verma</a
+                  >
+                </p>
               </div>
             </footer>
           </div>
@@ -2522,17 +1054,17 @@
     </script>
     <!-- for highlighting text -->
     <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-          new ClipboardJS('.copy-btn');
-          document.querySelectorAll('.copy-btn').forEach(button => {
-              button.addEventListener('click', () => {
-                  button.textContent = 'Copied!';
-                  setTimeout(() => {
-                      button.textContent = 'Copy';
-                  }, 2000);
-              });
+      document.addEventListener("DOMContentLoaded", (event) => {
+        new ClipboardJS(".copy-btn");
+        document.querySelectorAll(".copy-btn").forEach((button) => {
+          button.addEventListener("click", () => {
+            button.textContent = "Copied!";
+            setTimeout(() => {
+              button.textContent = "Copy";
+            }, 2000);
           });
+        });
       });
-  </script>
+    </script>
   </body>
 </html>
