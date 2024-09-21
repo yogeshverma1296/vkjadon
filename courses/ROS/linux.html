@@ -767,18 +767,22 @@
                     <ul>
                       <li><strong>Read (r)</strong>: Refers to a user's ability to read the contents of the file.</li>
                       <li><strong>Write (w)</strong>: Refers to a user's ability to write or modify a file or directory.</li>
-                      <li><strong>Execute(x)</strong>: Refers to user's ability to execute a file or view the contents of a directory. </li>
+                      <li><strong>Execute (x)</strong>: Refers to user's ability to execute a file or view the contents of a directory. </li>
                     </ul>
-                    <p>Permission level:</p>
+                    <p><span class="color-blue font-bold">Permission level:</span></p>
                     <ul>
-                      <li>User(u): Represented by first 3 characters.</li>
-                      <li>Group(g): Represented by middle 3 characters.</li>
-                      <li>Other(o): Represented by last 3 characters.</li>
-                      <li>All (a): All users</li>
+                      <li><strong>User (u)</strong>: Represented by first 3 characters.</li>
+                      <li><strong>Group (g)</strong>: Represented by middle 3 characters.</li>
+                      <li><strong>Other (o)</strong>: Represented by last 3 characters.</li>
+                      <li><strong>All (a)</strong>: All users</li>
                     </ul>
+                    <p>Generally, the <strong>owner</strong> of the file has <strong>read (r)</strong> and <strong>read (r)</strong> permissions, and the group and the <strong>rest of users</strong> have only <strong>read (r)</strong> permissions.</p>
                     <p><strong>Syntax</strong>: </p>
+                    <pre class="language-bash"><code>chmod groups_to_assign_the_permissions permissions_to_assign/remove file/folder_names</code></pre>
                     <pre class="language-bash"><code>$ chmod permission_level+permission_type file_name</code></pre>
                     <pre class="language-bash"><code>~ test_folder$ ls -l</code></pre>
+                    <pre class="language-bash"><code>chmod a+w file_name</code></pre>
+                    <pre class="language-bash"><code>chmod +x file_name</code></pre>
                     <pre class="language-bash"><code>$ chmod a+w test_file_text.txt</code></pre>
                     <pre class="language-bash"><code>~ test_folder$ ls -l</code></pre>
                     <pre class="language-bash"><code>$ chmod o-w test_file_text.txt</code></pre>
@@ -793,6 +797,7 @@
                       title="Link to this heading"
                       ></a
                     ></h2>
+                    <p><em>redirect</em> the output of a command to a file</p>
                     <p>The <span class="color-red font-bold">></span> and <span class="color-red font-bold">>></span> operators redirect the output of a command to a file.</p>
                     <p>The operator <span class="color-red font-bold">></span> overwrites the target file with the output of the preceding command, it does not ask for permission, it just goes and does it.</p>
                     <p>The operator <span class="color-red font-bold">>></span> appends to the target file with the output of the preceding command.</p>
@@ -848,11 +853,13 @@
                       title="Link to this heading"
                       ></a
                     ></h2>
+                    <p><span class="color-red font-bold">'|'</span> or <span class="color-red font-bold">'|&'</span> : A pipeline is a sequence of one or more commands separated by one of the control operators</p>
+                    <p>The pipe can be used to link commands together to perform more complex tasks that would
+                      otherwise take multiple steps (and possibly writing information to disk).</p>
                     <p><span class="color-red font-bold">Grep</span> : Search for patterns in file(s)</p>
                     <p>Syntax: </p>
                     <pre class="language-bash"><code>grep [option] Patterns file_name</code></pre>
                     <pre class="language-bash"><code>~/test_folder$ grep -i ubuntu test_file_text.txt</code></pre>
-                    <p><span class="color-red font-bold">|</span> : A pipeline is a sequence of one or more commands separated by one of the control operators</p>
                     <p>Syntax:</p>
                     <pre class="language-bash"><code>command1 | command2</code></pre>
                     <p><span class="color-red font-bold">command1 && command2</span>: command2 is executed if, and only if, command1 returns an exit status of zero (success)</p>
@@ -917,9 +924,9 @@
                       title="Link to this heading"
                       ></a
                     ></h2>
-                    <p>Escape Character (\) It preserves the literal value of the next character.</p>
-                    <p>Single quotes (' ') preserves the literal value of each character.</p>
-                    <p>Double quotes (" ") preserves the literal value of all characters.</p>
+                    <p><strong>Escape Character (\)</strong>: It preserves the literal value of the next character.</p>
+                    <p><strong>Single quotes (' ')</strong>: preserves the literal value of each character.</p>
+                    <p><strong>Double quotes (" ")</strong>: preserves the literal value of all characters.</p>
                   </section>
                   <!-- Secure Shell (ssh)  -->
                   <section id="SecureShell">
@@ -930,7 +937,7 @@
                       ></a
                     ></h2>
                     <ul>
-                      <li>The ssh command is a way to securely connect to a remote computer.</li>
+                      <li>The <strong>ssh</strong> command is a way to securely connect to a remote computer.</li>
                       <li>Formats for this command:
                         <ul>
                           <li><strong>ssh hostname</strong></li>
@@ -941,8 +948,13 @@
                       <li>If you do not specify the username, it will assume that you want to connect with the same username that you have on this local computer.</li>
                       <li>Since you have a single username for all computers on the OIT network, you don't need to explicitly enter a username.</li>
                       <li>But you can give a username, and will need to if your local username is different that your GL username. This might be the case if you are logging on from home and set up your username to be different from what it is on GL.</li>
-                      <li>Demo with connecting with different usernames.</li>
                     </ul>
+                    <h3>Demo with connecting with different usernames.</h3>
+                    <p>The command printenv | grep -i ros prints all environment variables that contain the string "ros", regardless of capitalization.</p>
+                    <pre class="language-bash"><code>printenv | grep -i ROS</code></pre>
+                    <p>The printenv command prints all the environment variables currently set in the system, while the grep command is used to search for a specific pattern in a text stream. The -i option used with grep indicates that the search should be case-insensitive, so both "ROS" and "ros" will match.</p>
+                    <p>By piping the output of printenv to grep, we can filter the environment variables to only show those that contain the string "ros". This can be useful in the context of ROS development, as many ROS-related environment variables are defined when ROS is sourced, and this command can help confirm that they are set correctly.</p>
+                    <img src="../img/Demowithconnectingwithdifferentusernames.png" alt="Demo with connecting with different usernames">
                   </section>
                   <!-- Thank You -->
                   <p>Thank You. End of Basics of Linux.</p>
